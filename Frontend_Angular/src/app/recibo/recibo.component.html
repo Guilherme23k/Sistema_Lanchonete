@@ -1,0 +1,11 @@
+<div *ngIf="pedidoItens.length > 0">
+    <h3>Carrinho</h3>
+    <ul>
+        <li *ngFor="let item of pedidoItens">
+            <p [textContent]="item.produto"></p>
+            <p [textContent]="item.quantidade"></p>
+        </li>
+    </ul>
+</div>
+
+

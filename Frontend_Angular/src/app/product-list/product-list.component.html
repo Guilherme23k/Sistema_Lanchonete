@@ -1,0 +1,37 @@
+
+
+<div class="product-list container">
+    <h2>Menu da Lanchonete</h2>
+    <div *ngFor="let produto of produtos" class="product-item row justify-content-center">
+        
+        <!-- Esta div inteira ela imprime um tipo de produto, tem que adicionar depois os outros tipos, ex: Combos, Bebidas, etc -->
+        <div class="col-5 p-2">
+            <img [src]="produto.image" style="height: 3rem; width: auto;">
+            <p>{{ produto.nome }}</p> 
+            <button (click)="removerProduto(produto)">-</button>
+            {{ produto.quantidade }}
+            <button (click)="adicionarProduto(produto)">+</button>
+            <br>
+            <button (click)="enviarParaPedido(produto)">Adicionar</button>
+            <hr>
+        </div>
+        <div class="col-2 p-2">
+            <img [src]="produto.image" style="height: 3rem;">
+            <p>{{ produto.nome }}</p>
+            <button (click)="removerProduto(produto)">-</button>
+            {{ produto.quantidade }}
+            <button (click)="adicionarProduto(produto)">+</button>
+            <br>
+            <button (click)="enviarParaPedido(produto)">Adicionar</button>
+            <hr>
+        </div>
+
+    </div>
+    <button (click)="finalizarPedido()">Enviar para o carrinho</button>
+
+</div>
+<div>
+    <app-recibo></app-recibo>
+</div>
+
+<button type="button" [routerLink]="['/']">Clique para voltar ao HUB</button>
