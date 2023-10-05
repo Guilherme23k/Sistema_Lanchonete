@@ -1,1 +1,90 @@
-<p>cadastro-produtos works!</p>
+
+<!-- <div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <label for="nome">Nome:</label>
+        <input [(ngModel)]="produto.nome" name="nome" required>
+        
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco" [(ngModel)]="produto.preco" name="preco" required>
+        
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" [(ngModel)]="produto.quantidade" name="quantidade" required>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</div> -->
+
+<!-- <div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Formulário de Produto</h5>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" [(ngModel)]="produto.nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="number" class="form-control" id="preco" [(ngModel)]="produto.preco" name="preco"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" class="form-control" id="quantidade" [(ngModel)]="produto.quantidade"
+                        name="quantidade" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<div class="row justify-content-center">
+    <div class="col-4">
+        <h5 class="card-title text-center">Cadastro de Produto</h5>
+        <form (ngSubmit)="onSubmit()" class="mb-3">
+            <div class="form-group mb-2">
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" class="form-control" id="nome" [(ngModel)]="produto.nome" name="nome" required>
+            </div>
+            <div class="form-group mb-2">
+                <label for="price">Preço:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">R$</span>
+                    </div>
+                    <input type="number" class="form-control" id="price" [(ngModel)]="produto.price" name="price"
+                        required>
+                </div>
+            </div>
+            <div class="form-group mb-2">
+                <label for="image">Imagem:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">URL</span>
+                    </div>
+                    <input type="text" class="form-control" id="image" [(ngModel)]="produto.image" name="image"
+                        required>
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <label for="categoria">Categoria:</label>
+                <select class="form-control" id="categoria" name="categoria"
+                    required>
+                    <option value="Bebida">Bebida</option>
+                    <option value="Prato Principal">Prato Principal</option>
+                    <option value="Sobremesa">Sobremesa</option>
+                </select>
+            </div> -->
+            <!-- <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <textarea class="form-control" id="descricao"  name="descricao"
+                    rows="3"></textarea>
+            </div> -->
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar Produto</button>
+        </form>
+        <button type="button" [routerLink]="['/']">Clique para voltar ao HUB</button>
+    </div>
+</div>
+<br>
+

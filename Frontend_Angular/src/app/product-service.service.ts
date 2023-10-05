@@ -17,6 +17,10 @@ export class ProductServiceService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
+  postProducts(produto: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, produto);
+  }
+
   setPedidoItens(data: any[]){
     this.pedidoItens = data;
   }

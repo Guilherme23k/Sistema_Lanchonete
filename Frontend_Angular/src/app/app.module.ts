@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    FormsModule,
   RouterModule],
   providers: [],
   bootstrap: [AppComponent]
